@@ -17,9 +17,9 @@ public class PlayerPrefStoreJSON:MonoBehaviour
     {
         /*profile.PlayerName = PlayerPrefs.GetString("CurrentName");
         profile.PlayerSlot = PlayerPrefs.GetInt("CurrentSlot");*/
-
+        
         string stringToPrint = JsonUtility.ToJson(profile);
-        Debug.Log(stringToPrint);
+ //       Debug.Log(stringToPrint);
 	}
 	
     public void SavePrefs()
