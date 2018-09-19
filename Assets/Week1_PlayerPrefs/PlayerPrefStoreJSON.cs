@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPrefStoreJSON:MonoBehaviour
+public class PlayerPrefStoreJSON :MonoBehaviour
 {
     public string InputName;
     public int InputSlot;
@@ -10,16 +10,18 @@ public class PlayerPrefStoreJSON:MonoBehaviour
     public string CurrentName;
     public int CurrentSlot;
 
-    public PlayerPrefStore[] profile;
+    public Profiles OutputProfiles;
+    //public PlayerPrefStore[] CurrentProfile;
 
 	// Use this for initialization
 	void Start ()
     {
         /*profile.PlayerName = PlayerPrefs.GetString("CurrentName");
         profile.PlayerSlot = PlayerPrefs.GetInt("CurrentSlot");*/
-        
-        string stringToPrint = JsonUtility.ToJson(profile);
- //       Debug.Log(stringToPrint);
+        //profile.
+        //OutputProfiles.profile = CurrentProfile;
+        string stringToPrint = JsonUtility.ToJson(OutputProfiles, true);
+        Debug.Log(stringToPrint);
 	}
 	
     public void SavePrefs()
