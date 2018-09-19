@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class PlayerPrefStoreJSON :MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class PlayerPrefStoreJSON :MonoBehaviour
         //profile.
         //OutputProfiles.profile = CurrentProfile;
         string stringToPrint = JsonUtility.ToJson(OutputProfiles, true);
-        Debug.Log(stringToPrint);
+
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "GPG220_MiniTasks.json"), stringToPrint);
+        Debug.Log(File.ReadAllText(Path.Combine(Application.persistentDataPath, "GPG220_MiniTasks.json")));
 	}
 	
     public void SavePrefs()

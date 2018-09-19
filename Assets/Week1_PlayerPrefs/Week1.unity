@@ -309,7 +309,7 @@ MonoBehaviour:
   CurrentSlot: 0
   OutputProfiles:
     profile:
-    - PlayerName: Rhark
+    - PlayerName: s
       PlayerSlot: 1
       Element:
       - Earth
