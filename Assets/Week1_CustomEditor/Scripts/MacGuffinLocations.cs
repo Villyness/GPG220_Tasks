@@ -5,6 +5,7 @@ using UnityEngine;
 public class MacGuffinLocations : MonoBehaviour
 {
     public string Location;
+    public GameObject ObjectToSpawn;
 
     public string Element
     {
@@ -26,4 +27,6 @@ public class MacGuffinLocations : MonoBehaviour
             return (LocationCheck);
         }
     }
+
+    //public 
 }
