@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+[CustomEditor(typeof(MacGuffinLocations))]
 public class MacGuffinLocationEditor : Editor
 {
+    public override void OnInspectorGUI()
+    {
+        MacGuffinLocations ItemLocations = (MacGuffinLocations)target;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+        ItemLocations.Location = EditorGUILayout.TextField("Location", ItemLocations.Location);
+        EditorGUILayout.LabelField("Element", ItemLocations.Element);
+    }
 }
