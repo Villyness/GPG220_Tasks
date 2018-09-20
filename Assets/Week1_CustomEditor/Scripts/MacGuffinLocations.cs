@@ -6,6 +6,7 @@ public class MacGuffinLocations : MonoBehaviour
 {
     public string Location;
     public GameObject ObjectToSpawn;
+    public Vector3 SpawnLocation;
 
     public string Element
     {
@@ -26,6 +27,11 @@ public class MacGuffinLocations : MonoBehaviour
             }
             return (LocationCheck);
         }
+    }
+
+    public void SpawnObject()
+    {
+        Instantiate(ObjectToSpawn, SpawnLocation, Quaternion.identity);
     }
 
     //public 
